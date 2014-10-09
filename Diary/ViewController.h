@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NATDiaryEntry;
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong)NATDiaryEntry *entry;
 
 
 @end

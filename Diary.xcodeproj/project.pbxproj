@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE4BE72B19E6331200F3E92D /* NATNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4BE72A19E6331200F3E92D /* NATNavigationController.m */; };
+		DE4BE72E19E63E9500F3E92D /* NATEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4BE72D19E63E9500F3E92D /* NATEntryCell.m */; };
+		DE5948BB19E5E7FB000BB199 /* NATEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5948BA19E5E7FB000BB199 /* NATEntryViewController.m */; };
+		DE5948BE19E5EF05000BB199 /* NATEntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5948BD19E5EF05000BB199 /* NATEntryListViewController.m */; };
 		DE5D32B519E0C042004081CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32B419E0C042004081CD /* main.m */; };
 		DE5D32B819E0C042004081CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32B719E0C042004081CD /* AppDelegate.m */; };
 		DE5D32BB19E0C042004081CD /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32B919E0C042004081CD /* Diary.xcdatamodeld */; };
@@ -15,6 +19,9 @@
 		DE5D32C319E0C042004081CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5D32C219E0C042004081CD /* Images.xcassets */; };
 		DE5D32C619E0C042004081CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5D32C419E0C042004081CD /* LaunchScreen.xib */; };
 		DE5D32D219E0C043004081CD /* DiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32D119E0C043004081CD /* DiaryTests.m */; };
+		DE5D32DC19E0C063004081CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D32DB19E0C063004081CD /* CoreData.framework */; };
+		DE5D32DF19E0C3FD004081CD /* NATCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32DE19E0C3FD004081CD /* NATCoreDataStack.m */; };
+		DE5D32E219E0C8F7004081CD /* NATDiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32E119E0C8F7004081CD /* NATDiaryEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE4BE72919E6331200F3E92D /* NATNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATNavigationController.h; sourceTree = "<group>"; };
+		DE4BE72A19E6331200F3E92D /* NATNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATNavigationController.m; sourceTree = "<group>"; };
+		DE4BE72C19E63E9500F3E92D /* NATEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATEntryCell.h; sourceTree = "<group>"; };
+		DE4BE72D19E63E9500F3E92D /* NATEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATEntryCell.m; sourceTree = "<group>"; };
+		DE5948B919E5E7FB000BB199 /* NATEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATEntryViewController.h; sourceTree = "<group>"; };
+		DE5948BA19E5E7FB000BB199 /* NATEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATEntryViewController.m; sourceTree = "<group>"; };
+		DE5948BC19E5EF05000BB199 /* NATEntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATEntryListViewController.h; sourceTree = "<group>"; };
+		DE5948BD19E5EF05000BB199 /* NATEntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATEntryListViewController.m; sourceTree = "<group>"; };
 		DE5D32AF19E0C042004081CD /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5D32B319E0C042004081CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5D32B419E0C042004081CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +57,11 @@
 		DE5D32CB19E0C043004081CD /* DiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5D32D019E0C043004081CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5D32D119E0C043004081CD /* DiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiaryTests.m; sourceTree = "<group>"; };
+		DE5D32DB19E0C063004081CD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DE5D32DD19E0C3FC004081CD /* NATCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATCoreDataStack.h; sourceTree = "<group>"; };
+		DE5D32DE19E0C3FD004081CD /* NATCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATCoreDataStack.m; sourceTree = "<group>"; };
+		DE5D32E019E0C8F7004081CD /* NATDiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDiaryEntry.h; sourceTree = "<group>"; };
+		DE5D32E119E0C8F7004081CD /* NATDiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATDiaryEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5D32DC19E0C063004081CD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 		DE5D32A619E0C042004081CD = {
 			isa = PBXGroup;
 			children = (
+				DE5D32DB19E0C063004081CD /* CoreData.framework */,
 				DE5D32B119E0C042004081CD /* Diary */,
 				DE5D32CE19E0C043004081CD /* DiaryTests */,
 				DE5D32B019E0C042004081CD /* Products */,
@@ -83,14 +105,26 @@
 		DE5D32B119E0C042004081CD /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				DE5D32DD19E0C3FC004081CD /* NATCoreDataStack.h */,
+				DE5D32DE19E0C3FD004081CD /* NATCoreDataStack.m */,
+				DE5948BC19E5EF05000BB199 /* NATEntryListViewController.h */,
+				DE5948BD19E5EF05000BB199 /* NATEntryListViewController.m */,
 				DE5D32B619E0C042004081CD /* AppDelegate.h */,
 				DE5D32B719E0C042004081CD /* AppDelegate.m */,
+				DE4BE72919E6331200F3E92D /* NATNavigationController.h */,
+				DE4BE72A19E6331200F3E92D /* NATNavigationController.m */,
 				DE5D32BC19E0C042004081CD /* ViewController.h */,
 				DE5D32BD19E0C042004081CD /* ViewController.m */,
 				DE5D32BF19E0C042004081CD /* Main.storyboard */,
+				DE4BE72C19E63E9500F3E92D /* NATEntryCell.h */,
+				DE4BE72D19E63E9500F3E92D /* NATEntryCell.m */,
+				DE5948B919E5E7FB000BB199 /* NATEntryViewController.h */,
+				DE5948BA19E5E7FB000BB199 /* NATEntryViewController.m */,
 				DE5D32C219E0C042004081CD /* Images.xcassets */,
 				DE5D32C419E0C042004081CD /* LaunchScreen.xib */,
 				DE5D32B919E0C042004081CD /* Diary.xcdatamodeld */,
+				DE5D32E019E0C8F7004081CD /* NATDiaryEntry.h */,
+				DE5D32E119E0C8F7004081CD /* NATDiaryEntry.m */,
 				DE5D32B219E0C042004081CD /* Supporting Files */,
 			);
 			path = Diary;
@@ -222,10 +256,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5D32E219E0C8F7004081CD /* NATDiaryEntry.m in Sources */,
+				DE5D32DF19E0C3FD004081CD /* NATCoreDataStack.m in Sources */,
 				DE5D32BB19E0C042004081CD /* Diary.xcdatamodeld in Sources */,
+				DE4BE72B19E6331200F3E92D /* NATNavigationController.m in Sources */,
+				DE4BE72E19E63E9500F3E92D /* NATEntryCell.m in Sources */,
 				DE5D32B819E0C042004081CD /* AppDelegate.m in Sources */,
 				DE5D32BE19E0C042004081CD /* ViewController.m in Sources */,
 				DE5D32B519E0C042004081CD /* main.m in Sources */,
+				DE5948BB19E5E7FB000BB199 /* NATEntryViewController.m in Sources */,
+				DE5948BE19E5EF05000BB199 /* NATEntryListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +456,7 @@
 				DE5D32D719E0C043004081CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE5D32D819E0C043004081CD /* Build configuration list for PBXNativeTarget "DiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +465,7 @@
 				DE5D32DA19E0C043004081CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
