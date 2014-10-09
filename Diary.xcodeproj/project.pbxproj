@@ -22,6 +22,8 @@
 		DE5D32DC19E0C063004081CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D32DB19E0C063004081CD /* CoreData.framework */; };
 		DE5D32DF19E0C3FD004081CD /* NATCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32DE19E0C3FD004081CD /* NATCoreDataStack.m */; };
 		DE5D32E219E0C8F7004081CD /* NATDiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5D32E119E0C8F7004081CD /* NATDiaryEntry.m */; };
+		DEFC8CA719E717D40066787A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFC8CA619E717D40066787A /* QuartzCore.framework */; };
+		DEFC8CA919E722370066787A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFC8CA819E722370066787A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		DE5D32DE19E0C3FD004081CD /* NATCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATCoreDataStack.m; sourceTree = "<group>"; };
 		DE5D32E019E0C8F7004081CD /* NATDiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDiaryEntry.h; sourceTree = "<group>"; };
 		DE5D32E119E0C8F7004081CD /* NATDiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATDiaryEntry.m; sourceTree = "<group>"; };
+		DEFC8CA619E717D40066787A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DEFC8CA819E722370066787A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFC8CA919E722370066787A /* CoreLocation.framework in Frameworks */,
+				DEFC8CA719E717D40066787A /* QuartzCore.framework in Frameworks */,
 				DE5D32DC19E0C063004081CD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +92,8 @@
 		DE5D32A619E0C042004081CD = {
 			isa = PBXGroup;
 			children = (
+				DEFC8CA819E722370066787A /* CoreLocation.framework */,
+				DEFC8CA619E717D40066787A /* QuartzCore.framework */,
 				DE5D32DB19E0C063004081CD /* CoreData.framework */,
 				DE5D32B119E0C042004081CD /* Diary */,
 				DE5D32CE19E0C043004081CD /* DiaryTests */,

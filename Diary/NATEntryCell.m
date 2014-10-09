@@ -8,6 +8,7 @@
 
 #import "NATEntryCell.h"
 #import "NATDiaryEntry.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface NATEntryCell ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -30,31 +31,45 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)heightForEntry:(NATDiaryEntry *)entry
-{
++ (CGFloat)heightForEntry:(NATDiaryEntry *)entry {
     const CGFloat topMargin = 35.0f;
     const CGFloat bottomMargin = 80.0f;
-    const CGFloat minHeight = 85.0f;
-    
-    //system font, with sytem fontSize
+    const CGFloat minHeight = 106.0f;
     
     UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
+    CGRect boundingBox = [entry.body boundingRectWithSize:CGSizeMake(202, CGFLOAT_MAX) options:(NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: font} context:nil];
     
-    //CGFLOAT_MAX has no maximum, infinite  (although it technically says it's non-infinite)
-    //217 is the width of the label for the main text body
-    //_MAX means there is no cap on max height
-    //this crazy line calculates how big the space required for the text will be
-    //(NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin)
-    //this passes in the font (to help with spacing calculations)
-    //@{NSFontAttributeName: font}
-    
-    CGRect boundingBox = [entry.body boundingRectWithSize:CGSizeMake(217, CGFLOAT_MAX) options:(NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: font} context:nil];
-    
-    //if the minimum height is greater, return min height
-    //otherwise, return result of calculations for necessary size 
-    return MAX(minHeight, CGRectGetHeight(boundingBox)+topMargin +bottomMargin);
+    return MAX(minHeight, CGRectGetHeight(boundingBox) + topMargin + bottomMargin);
 }
+
+
+//+ (CGFloat)heightForEntry:(NATDiaryEntry *)entry
+//{
+//    const CGFloat topMargin = 35.0f;
+//    const CGFloat bottomMargin = 80.0f;
+//    const CGFloat minHeight = 106.0f;
+//    
+//    //system font, with sytem fontSize
+//    
+//    UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+//    
+//    
+//    //CGFLOAT_MAX has no maximum, infinite  (although it technically says it's non-infinite)
+//    //217 is the width of the label for the main text body
+//    //_MAX means there is no cap on max height
+//    //this crazy line calculates how big the space required for the text will be
+//    //(NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin)
+//    //this passes in the font (to help with spacing calculations)
+//    //@{NSFontAttributeName: font}
+//    
+//    CGRect boundingBox = [entry.body boundingRectWithSize:CGSizeMake(202, CGFLOAT_MAX) options:(NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: font} context:nil];
+//    
+//    //if the minimum height is greater, return min height
+//    //otherwise, return result of calculations for necessary size 
+//    return MAX(minHeight, CGRectGetHeight(boundingBox)+ topMargin + bottomMargin);
+//}
+
 
 -(void)configureCellForEntry:(NATDiaryEntry*)entry
 {
@@ -73,19 +88,29 @@
     
     //if the entry has an image, use it. Otherwise, use a placeholder
     if (entry.image) {
-        self.imageView.image = [UIImage imageWithData:entry.image];
+        self.mainImageView.image = [UIImage imageWithData:entry.image];
     } else {
-        self.imageView.image = [UIImage imageNamed:@"icn_noimage"];
+        self.mainImageView.image = [UIImage imageNamed:@"icn_noimage"];
     }
     
     if (entry.mood == NATDiaryEntryMoodGood) {
-        self.imageView.image = [UIImage imageNamed:@"icn_happy"];
+        self.moodImageView.image = [UIImage imageNamed:@"icn_happy"];
     } else if (entry.mood == NATDiaryEntryMoodAverage){
-        self.imageView.image = [UIImage imageNamed:@"icn_average"];
+        self.moodImageView.image = [UIImage imageNamed:@"icn_average"];
 
-    } else if (entry.mood == NATDiaryEntryMoodBad)
-                                self.imageView.image = [UIImage imageNamed:@"icn_bad"];
+    } else if (entry.mood == NATDiaryEntryMoodBad) {
+                                self.moodImageView.image = [UIImage imageNamed:@"icn_bad"];
 
+    }
+    //make the image a circle
+    self.mainImageView.layer.cornerRadius = CGRectGetWidth(self.mainImageView.frame ) /2.0f;
+
+    if (entry.location.length > 0) {
+        self.locationLabel.text = entry.location;
+    } else {
+        self.locationLabel.text = @"No location";
+    }
 }
+
 
 @end

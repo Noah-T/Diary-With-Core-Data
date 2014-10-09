@@ -11,6 +11,12 @@
 #import "NATEntryViewController.h"
 #import "NATEntryCell.h"
 @interface NATEntryListViewController () <NSFetchedResultsControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *moodImageView;
+@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong)NATDiaryEntry *entry;
@@ -18,6 +24,8 @@
 @end
 
 @implementation NATEntryListViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

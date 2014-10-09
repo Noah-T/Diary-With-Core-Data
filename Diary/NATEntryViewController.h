@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NATDiaryEntry.h"
+#import <CoreLocation/CoreLocation.h>   
 
 @interface NATEntryViewController : UIViewController
 
